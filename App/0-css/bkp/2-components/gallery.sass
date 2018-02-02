@@ -1,0 +1,59 @@
+.galleryPic
+  height: 18vw
+  +lg
+    height: 21vw
+  +md
+    height: 25vw
+  +sm
+    height: auto
+    width: 95%
+    
+
+.galleryContent
+  height: 100vh
+  width: 90%
+  margin: 0 auto
+  +myFlex
+  justify-content: center
+  align-items: center
+.galleryWrapper
+  margin: 0 auto
+  width: 100%
+  +myFlex
+  flex-flow: row
+  flex-wrap: wrap
+  justify-content: center
+  align-items: center
+
+#gallery
+
+
+  +sm
+    height: 900vw
+  .galleryContent
+    +lg
+      height: 90vw
+    +sm
+      height: 900vw
+
+.galleryOn
+  .galleryContent
+    .galleryWrapper
+      div
+        &:hover
+          z-index: 1
+          transform: scale(1.5,1.5)
+          +sm
+            transform: scale(1.1,1.1)
+        +liAnimator(14, cardAnimator, 300ms)
+        opacity: 1
+
+
+.galleryOff
+  .galleryContent
+    .galleryWrapper
+      div
+        &:hover
+          transform: rotate(7deg)
+        +liAnimator(14, hide, 100ms)
+        opacity: 0

@@ -1,0 +1,118 @@
+#nav
+
+  +zeroPads
+  background-color: $headerBGColor
+  border-bottom: 1px solid #f3f3f3
+  position: fixed
+  width: 100%
+  z-index: 3
+
+  +transition3(background 2s ease, color 2s ease,border-bottom 2s ease)
+  &:hover
+    // background-color: $dark
+    // color: $white
+  .brand
+    width: 30%
+    +md
+      width: 95%
+  .links
+    width: 70%
+    +md
+      width: 5%
+    ul
+      padding-left: 28%
+      +md
+        display: none
+
+    .hamburger, .hamburgerOff
+      display: none
+      transform: all .5s ease
+      width: 100%
+      flex-direction: column
+      align-items: center
+      cursor: pointer
+      .mid
+        margin-top: 7px
+        margin-bottom: 7px
+      +md
+        display: flex
+    .hamburger
+      &:hover
+
+        .top
+          +transform(translateY(8px))
+        .mid
+          +transform(rotate(270deg))
+        .bot
+          +transform(translateY(-8px))
+    .hamburgerOff
+      .top
+        +transform(translateY(7px))
+        width: 25px
+      .bot
+        +transform(translateY(-7px))
+        width: 25px
+
+
+
+
+
+
+
+  ul
+    +zeroPads
+    li
+      font-size: $fontM
+      list-style: none
+      display: inline
+      padding-right: $paddingM
+      cursor: pointer
+
+      &:hover
+        color: #777
+
+.innerNav
+  +grid-6
+
+  div
+    display: inline-block
+
+.hamMenu
+  +translateAndRotate(25px,13px, 90deg)
+  text-align: left
+  font-size: 9px
+
+.hamSelectionOff
+  display: none
+  .mobileham
+    opacity: 0
+.mobileham
+  transform: all 5s ease
+.hamSelection
+  +myFlex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  height: 100vh
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 2
+
+  background-color: white
+  .mobileham
+    opacity: 1
+    font-size: 30px
+    padding: 10px
+
+.fName
+  font-size: 50px
+
+.sName
+  +translateAndRotate(-35%,-14px, 90deg)
+  text-align: left
+  font-size: 9px
+
+.top, .bot, .mid
+  transition: all .2s ease

@@ -1,0 +1,147 @@
+@keyframes textAnimator1
+  0%
+    +translate((random(100)+px),(random(100)+px))
+    color: #00aeff
+    opacity: 0
+
+  100%
+    +translate(0px,0px)
+    color: $dark
+    opacity: 1
+
+@keyframes textAnimator2
+  0%
+    +translate(200px,200px)
+    +transform(scale(1,1))
+    +transform(rotateY(45deg))
+
+    opacity: 0
+  50%
+    +transform(scale(1.5,1.5))
+
+  100%
+    +translate(0px,0px)
+    +transform(scale(1,1))
+    +transform(rotateY(0deg))
+    color: $dark
+    opacity: 1
+
+
+@keyframes textAnimator3
+  0%
+    opacity: 0
+    color: #00aeff
+
+  75%
+    opacity: 0
+
+  100%
+    opacity: 1
+    color: $dark
+
+@keyframes cardAnimator
+  0%
+    opacity: 0
+    +translate(0px,70px)
+
+  100%
+    opacity: 1
+    +translate(0px,0px)
+
+
+@keyframes hovering
+  50%
+    transform: translateY(-3px)
+
+  100%
+    transform: translateY(-6px)
+
+@keyframes imgAnimator1
+  0%
+    +transform(translate(-50px,20px))
+
+    opacity: 0
+
+
+
+  100%
+    +transform(translate(0px,0px))
+    opacity: 1
+
+@keyframes shadow
+  0%
+    transform: translateY(6px)
+    opacity: .4
+  50%
+    transform: translateY(3px)
+    opacity: 1
+  100%
+    transform: translateY(6px)
+    opacity: .4
+
+@keyframes neon2
+  from
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF
+
+  to
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF
+
+@keyframes bounce
+  0%
+    transform: translateY(6px)
+    opacity: 1
+
+  50%
+    transform: translateY(-40px)
+    opacity: .5
+
+  100%
+    transform: translateY(6px)
+    opacity: 1
+
+@keyframes hide
+  0%
+    transform: translateY(6px)
+    opacity: 1
+
+  100%
+    transform: translateY(6px)
+    opacity: 0
+
+@keyframes jello
+
+
+  from, 11.1%, to
+    transform: none
+    opacity: 0
+
+  22.2%
+    transform: skewX(-12.5deg) skewY(-12.5deg)
+    opacity: .14
+
+  33.3%
+    transform: skewX(6.25deg) skewY(6.25deg)
+    opacity: .28
+
+  44.4%
+    transform: skewX(-3.125deg) skewY(-3.125deg)
+    opacity: .42
+
+  55.5%
+    transform: skewX(1.5625deg) skewY(1.5625deg)
+    opacity: .56
+
+  66.6%
+    transform: skewX(-0.78125deg) skewY(-0.78125deg)
+    opacity: .70
+
+  77.7%
+    transform: skewX(0.390625deg) skewY(0.390625deg)
+    opacity: .84
+
+  88.8%
+    transform: skewX(-0.1953125deg) skewY(-0.1953125deg)
+    opacity: 1.0
+
+  100%
+    opacity: 1

@@ -1,0 +1,27 @@
+.projectAnimate
+  .grid-4
+
+    +liAnimator(4, cardAnimator, 300ms)
+    .containerCard
+      opacity: 1
+
+.grid-4
+  .containerCard
+    transform: all
+    opacity: 0
+.myCardHolder
+  +myFlex
+  align-items: center
+  +md
+    flex-direction: column
+
+#projects
+  +sm
+    height: 350vw
+  +md
+    height: 250vw
+  .content
+    +sm
+      height: 350vw
+    +md
+      height: 250vw

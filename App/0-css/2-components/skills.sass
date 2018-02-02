@@ -1,0 +1,131 @@
+
+
+.skillBackground
+  position: fixed
+  top: 0
+  left: 0
+  z-index: -1
+  width: 100%
+  opacity: 0
+  transform: all .5s ease
+
+.skillsAnimateOn
+  .skillBackground
+    opacity: 1
+  .skillsContent
+    .skillsSubContent
+      .brain
+        opacity: 1
+      .skillLists
+        opacity: 1
+
+.skillsAnimateOff
+  .skillBackground
+    opacity: 0
+  .skillsContent
+    .skillsSubContent
+      .brain
+        opacity: 0
+      .skillLists
+        opacity: 0
+
+.skillsContent
+
+  +grid-10
+  +myFlex
+  height: 100vh
+  flex-wrap: nowrap
+  align-items: center
+
+  .skillsSubContent
+
+    font-size: 3vw
+    +md
+      font-size: 4.5vw
+    +sm
+      font-size: 0vw
+    width: 50%
+    height: 50vh
+    +sm
+      height: 80vh
+    +myFlex
+    +lg
+      align-items: center
+
+    flex-wrap: nowrap
+    transform: all .5s ease
+    .r
+      font-family: Fredericka
+      color: #fff
+    .brain
+      width: 30%
+      +lg
+        width: 20%
+      +md
+        width: 0%
+      z-index: 0
+      transition: all .5s ease
+      opacity: 0
+      &:hover
+        transform: scale(1.1, 1.1) rotate(-1deg)
+    .skillLists
+      height: 50vh
+      transform: all 5s ease
+      width: 70%
+      +lg
+        width: 80%
+      z-index: 0
+      +md
+        width: 100%
+      ul
+        display: flex
+        list-style: none
+
+      img
+        padding: 5px
+        +lg
+          width: 30%
+        +sm
+          width: 43%
+      p
+        font-size: 3.5vw
+
+// .skillCreativeAnimate-off
+//   opacity: 0
+// .skillLogicAnimate-off
+//   opacity: 0
+
+.skill-img
+  width: 100%
+
+.l
+  font-family: Nixie
+
+  img
+    float: right
+  p
+    float: right
+
+    color: #adadad
+
+.skillLeft
+  float: right
+  list-style-type: none
+  display: flex
+  li
+    padding: 3px
+
+.skillCreativeAnimate
+  li
+    +liAnimatorHover(16, jello, 200ms)
+
+.skillLogicAnimate
+  li
+    +liAnimatorHover(16, textAnimator2, 70ms)
+
+.skillItemAnimate
+  img
+    &:hover
+      transform: rotate(7deg)
+    +liAnimator(9, cardAnimator, 100ms)
+    opacity: 1
